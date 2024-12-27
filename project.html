@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script >
+    $(document).ready(function(){
+        $("#signupform").validate({
+            rules:{
+                fname:{
+                    required:true,
+                    minlength:4,
+                    maxlength:6
+                },
+                sname:{
+                    required:true,
+                    minlength:3
+                },
+                email:{
+                    required:true,
+                    email:true
+    
+                },
+                password:{
+                    required:true,
+                    minlength:6
+                },
+                section:{
+                    required:true
+                }
+            },
+                messages:{
+                    fname:{
+                    // fname:"enter first name"   - if separetly we are giving
+                    required:"enter the first name",
+                    minlength:"enter atleast characte"
+                    }
+               
+            }
+        })
+    })
+    
+</script>
+
+    <style>
+.header{
+    background-color: #4267b2;
+    color: white;
+    width: 53%;
+    padding-left: 3%;
+    padding: top 10px;
+    height : 85px;
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0%;
+    font-size: 22px;
+    
+}
+.form{ 
+    
+    background-color: #4267b2;
+    width: 44%;
+    height : 85px;
+    float:right
+} 
+.a{
+    color: white;
+    font-size: 15px;
+   
+}
+.b{
+    color: white;
+    font-size: 15px;
+   
+}
+.c{
+    color: white;
+text-decoration: none;}
+
+    .login{
+ background-color: #4267b2;
+ color:white;
+ cursor: pointer;
+ 
+    }
+    .login:hover{
+    background-color: blue;
+    }
+    .kbody{
+        background-color: rgb(225, 230, 234);
+        width:100%;
+        height:620px;
+        margin-bottom: 0%;
+        
+        
+    }
+    .left-b{
+        width:50%;
+        
+        height: 50%;
+        float:left;
+        padding-left:132px;
+        padding-top:52px;
+        font-size: 21px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .right-b{
+        width: 40%;
+        float:right;
+        padding-top: 3px;
+        background-color: rgb(225, 230, 234);
+         height: 50%;
+    }
+    .limage{
+        width: 581px;
+        height: 200px
+    }
+    .box1{height: 25px;}
+    .box2{height: 25px;}
+    .box3{
+        margin-top:3%;
+        height:25px;
+            width:50%;}
+            .box4{margin-top:3%;
+                height:25px;
+                    width:50%;}
+
+            .bir{
+                
+                margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: medium;
+                color: rgb(114, 112, 112);
+            }
+    .date{ padding-top:1px;
+        margin-top:0ch;
+        margin-top: 7px;
+       
+    }
+    .gen{
+        margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:20px ;
+                color: rgb(114, 112, 112);
+    }
+    .para2{
+        font-size: 10px;
+        font-weight: lighter;
+        color: rgb(67, 65, 65);
+    }
+    .but{
+        background-color: green;
+        color:white;
+        width:40%;
+        height:38px;
+        border-radius: 4px;
+        border-bottom: 3px;
+        border-right: 3px;
+
+    }
+    .footer{ width: 94%;
+        height: 5%;
+        background-color: rgb(225, 230, 234);
+        margin-top: 1%;
+        padding:3%;
+        margin-top:0px ;
+        float: inline-start;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header"><h1>facebook</h1></div>
+            <div class="form">
+        <form>
+            <form  action="form.php"></form>
+            <table>
+                <tr>
+                    <td class="a">Email or Mobile</td>
+                    <td class="b">Password</td>
+                    <td></td>
+                </tr>
+            <tr>
+           <td> <input type="email" placeholder=" " ></td>
+           <td> <input type="password" placeholder=""></td>
+           
+            <td><button class="login">Log in</button></td>
+            </tr>
+            <tr>
+                <td></td>
+            
+
+            <td ><a class="c" href="Forgotten.html">forgotten password?</a></td></tr>
+        </table>
+            </div>
+        </form>
+ 
+        </div>
+    </header>
+    
+    <div class="kbody">
+    <div class="left-b">
+        <p class="lpara"><b>Facebook helps you to connect and share with <br> people in your life</b></p>
+        <img  class="limage"src="connections.jpg">
+    </div>
+<div class="right-b">
+    <h1><b>Create an account</b></h1>
+    <h2>its quick and easy</h2>
+    <form>
+        <form action="form.php" id="signupform">
+      <input  name ="fname"class="box1" type="text" placeholder="name">
+      <input name="sname" class="box2"type="text"placeholder="surname"><br>
+    <input name="email" class="box3"type="email"placeholder="email or mobilenumbr"><br>
+    <input  name="password" class="box4" type="password"placeholder="enter new password"><br>
+   <div> <h3 class="bir">Birthday</h3>
+   <div class="date"><input  type="date"><br></div></div>
+    <h4 class="gen">Gender</h4>
+    
+        <label for="section id a">
+            <input type="radio" value="section a" name="section" id="section id a" >
+        </label>
+    
+Female
+<label for="section id b">
+    <input type="radio" value="section b" name="section" id="section id b" >
+</label>
+Male
+<label for="section id c">
+    <input type="radio" value="section c" name="section" id="section id c" >Custom
+</label>
+
+    </form>
+<div class="para2"><p>by clicking sign up you are agreeing to our <a href="terms.html">terms</a> <a href= "datapolicy.html"> data policy</a> and <a href="cooky.html"> cooky policy</a>. You may<br> receive sms notification from us and can opt out at any time</p></div>  
+    
+   <button class="but">Sign in</button>
+</div>
+
+</div>
+
+<footer class="footer">
+
+</footer>
+
+
+
+</body>
+</html>
